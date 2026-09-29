@@ -1,2 +1,3 @@
 # smart_result
-it can be track the result faslty as well as
+it can be track the result fastly as well as
+Author name - keshav kumar
