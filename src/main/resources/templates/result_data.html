@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Student Marksheet</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+
+<body class="bg-gray-100">
+
+
+<!-- HEADER -->
+<header class="bg-blue-600 text-white py-4 shadow">
+
+  <div class="max-w-6xl mx-auto px-6 flex justify-between">
+
+    <h1 class="text-2xl font-bold">
+      SmartResult
+    </h1>
+
+    <p class="font-medium">
+      Student Marksheet
+    </p>
+
+  </div>
+
+</header>
+
+
+
+<!-- MARKSHEET CARD -->
+<section class="max-w-5xl mx-auto mt-10 bg-white shadow-xl rounded-2xl p-8">
+
+
+  <!-- SCHOOL NAME -->
+  <div class="text-center border-b pb-6 mb-6">
+
+    <h2 class="text-3xl font-bold text-blue-600">
+      Student Marksheet
+    </h2>
+
+    <p class="text-gray-500">
+      Academic Performance Summery
+    </p>
+
+  </div>
+
+
+
+  <!-- STUDENT INFO -->
+  <div class="grid md:grid-cols-2 gap-6 mb-8">
+
+    <div>
+
+      <p><b>ID:</b> 1</p>
+
+      <p><b>Name:</b><span th:text="${student.name}"></span></p>
+
+      <p><b>Roll Number:</b><span th:text="${student.rollNumber}"></span></p>
+
+      <p><b>Email:</b><span th:text="${student.email}"></span></p>
+
+    </div>
+
+
+
+    <div>
+
+      <p><b>School:</b> <span th:text="${student.schoolname}"></span></p>
+
+      <p><b>DOB:</b><span th:text="${student.dob}"></span></p>
+
+      <p><b>Gender:</b> <span th:text="${student.gender}"></span></p>
+
+      <p><b>Exam:</b> Final Exam 2026</p>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- SUBJECT TABLE -->
+  <h3 class="text-xl font-semibold mb-4 text-blue-600">
+    Subject Marks
+  </h3>
+
+
+  <div class="overflow-x-auto">
+
+    <table class="w-full border">
+
+      <thead class="bg-blue-600 text-white">
+
+      <tr>
+
+        <th class="p-3 border">ID</th>
+
+        <th class="p-3 border">Subject</th>
+
+        <th class="p-3 border">Marks</th>
+
+        <th class="p-3 border">Max Marks</th>
+
+        <th class="p-3 border">Grade</th>
+
+        <th class="p-3 border">Remark</th>
+
+      </tr>
+
+      </thead>
+
+
+
+      <tbody class="text-center">
+
+      <tr class="hover:bg-gray-50" th:each="mark : ${marks}">
+
+        <td class="p-3 border"></td>
+
+        <td class="p-3 border"  th:text="${mark.subject}">Math</td>
+
+        <td class="p-3 border"  th:text="${mark.marks}">85</td>
+
+        <td class="p-3 border" th:text="${mark.maxMarks}"></td>
+
+        <td class="p-3 border text-green-600 font-semibold" th:text="${mark.grade}">A</td>
+
+        <td class="p-3 border" th:text="${mark.remark}">Excellent</td>
+
+      </tr>
+
+
+
+<!--      <tr class="hover:bg-gray-50">-->
+
+<!--        <td class="p-3 border">2</td>-->
+
+<!--        <td class="p-3 border">English</td>-->
+
+<!--        <td class="p-3 border">78</td>-->
+
+<!--        <td class="p-3 border">100</td>-->
+
+<!--        <td class="p-3 border text-green-600 font-semibold">B+</td>-->
+
+<!--        <td class="p-3 border">Very Good</td>-->
+
+<!--      </tr>-->
+
+
+
+<!--      <tr class="hover:bg-gray-50">-->
+
+<!--        <td class="p-3 border">3</td>-->
+
+<!--        <td class="p-3 border">Science</td>-->
+
+<!--        <td class="p-3 border">90</td>-->
+
+<!--        <td class="p-3 border">100</td>-->
+
+<!--        <td class="p-3 border text-green-600 font-semibold">A+</td>-->
+
+<!--        <td class="p-3 border">Outstanding</td>-->
+
+<!--      </tr>-->
+
+
+
+<!--      <tr class="hover:bg-gray-50">-->
+
+<!--        <td class="p-3 border">4</td>-->
+
+<!--        <td class="p-3 border">Computer</td>-->
+
+<!--        <td class="p-3 border">92</td>-->
+
+<!--        <td class="p-3 border">100</td>-->
+
+<!--        <td class="p-3 border text-green-600 font-semibold">A+</td>-->
+
+<!--        <td class="p-3 border">Excellent</td>-->
+
+<!--      </tr>-->
+
+
+
+<!--      <tr class="hover:bg-gray-50">-->
+
+<!--        <td class="p-3 border">5</td>-->
+
+<!--        <td class="p-3 border">Hindi</td>-->
+
+<!--        <td class="p-3 border">80</td>-->
+
+<!--        <td class="p-3 border">100</td>-->
+
+<!--        <td class="p-3 border text-green-600 font-semibold">A</td>-->
+
+<!--        <td class="p-3 border">Very Good</td>-->
+
+<!--      </tr>-->
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+
+
+  <!-- RESULT SUMMARY -->
+  <div class="mt-8 bg-gray-50 p-6 rounded-xl">
+
+    <h3 class="text-xl font-semibold mb-4 text-blue-600">
+      Final Result
+    </h3>
+
+
+    <div class="grid md:grid-cols-2 gap-4">
+
+      <p><b>Total Marks:</b> <span data-th-text="${totalMarks}"></span>/<span data-th-text="${totalMaxMarks}"></span> </p>
+
+      <p><b>Percentage:</b><span data-th-text="${percentage}"></span> </p>
+
+      <p><b>Final Grade:</b><span th:class="${totalGrade=='f'} ? 'text-red-700': 'text-green-700'" data-th-text="${totalGrade}"></span>  </p>
+
+      <p class="text-green-600 font-semibold">
+        Result: PASS
+      </p>
+
+    </div>
+
+
+    <p class="mt-4 text-gray-700">
+      Feedback: Excellent performance. Keep working hard and aim higher.
+    </p>
+
+  </div>
+
+  <div class="mt-8 flex justify-center space-x-4">
+    <a th:href="@{'/results/input'}" href="" class="px-3 text-white py-1 bg-blue-700 rounded">view Another Results</a>
+    <a button onclick="printMarksheet()" class="px-3 text-white py-1 bg-red-700 rounded">print</a>
+  </div>
+  </div>
+
+
+
+  <!-- SIGNATURE -->
+  <div class="flex justify-between mt-10 text-gray-600">
+
+    <p>
+      __________________<br>
+      Teacher Signature
+    </p>
+
+
+    <p>
+      __________________<br>
+      Principal Signature
+    </p>
+
+  </div>
+
+
+
+</section>
+
+
+
+<!-- FOOTER -->
+<footer class="text-center py-6 text-gray-500">
+
+  © 2026 Smart Result System
+
+</footer>
+
+<script>
+  console.log("Student Marksheet loaded");
+  //print functionality
+  function printMarksheet(){
+
+  window.print();
+  }
+</script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Result</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+
+<body class="bg-gray-50">
+
+
+<!-- HEADER / NAVBAR -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+        <!-- Brand Name -->
+        <h1 class="text-2xl font-bold text-blue-600">
+            SmartResult
+        </h1>
+
+        <!-- Navigation Links -->
+        <nav class="hidden md:flex space-x-8">
+
+            <a href="#" class="text-gray-700 font-medium hover:text-blue-600">
+                Home
+            </a>
+
+            <a th:href="@{'/results/input'}" href="#view" class="text-gray-700 font-medium hover:text-blue-600">
+                View Result
+            </a>
+
+            <a  th:href="@{'/results/add'}" href="#add" class="text-gray-700 font-medium hover:text-blue-600">
+                Add Result
+            </a>
+
+            <a href="#about" class="text-gray-700 font-medium hover:text-blue-600">
+                About
+            </a>
+
+            <a href="#contact" class="text-gray-700 font-medium hover:text-blue-600">
+                Contact
+            </a>
+
+        </nav>
+
+        <!-- Mobile Menu Icon -->
+        <div class="md:hidden">
+
+            <button class="text-gray-700">
+                ☰
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- HERO SECTION -->
+<section class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-24">
+
+    <div class="max-w-5xl mx-auto text-center px-6">
+
+        <h2 class="text-4xl font-bold mb-6">
+            Welcome to SmartResult
+        </h2>
+
+        <p class="text-lg mb-8">
+          The easiest way for student to access and understand their academic
+            result online. Fast.Accurate.Hassle-free
+        </p>
+
+        <button class="bg-white text-blue-600 px-6 py-3 rounded-xl font-semibold shadow-md">
+            Check  Your Result
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- FEATURES SECTION -->
+<section id="features" class="py-20">
+
+    <div class="max-w-6xl mx-auto px-6 text-center">
+
+        <h2 class="text-3xl font-bold mb-12">
+            Why smartResult?
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <div class="bg-white p-6 rounded-xl shadow">
+
+                <h3 class="text-xl font-semibold mb-3 text-blue-600">
+                    Instant Access
+                </h3>
+
+                <p>
+                    Student can view their results as soon
+                    -no waiting ,no hassie.
+                </p>
+
+            </div>
+
+
+            <div class="bg-white p-6 rounded-xl shadow">
+
+                <h3 class="text-xl font-semibold mb-3 text-blue-600">
+                    User Friendly
+                </h3>
+
+                <p>
+                    clean interface designed for simplicity
+                    Easily navigate,search,and understand
+                                your performance
+                </p>
+
+            </div>
+
+
+
+            <div class="bg-white p-6 rounded-xl shadow">
+
+                <h3 class="text-xl font-semibold mb-3 text-blue-600">
+                    Easy Interface
+                </h3>
+
+                <p>
+                    Your academic data is kept secure with
+                    modern standards and encryption
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!--&lt;!&ndash; HOW IT WORKS &ndash;&gt;-->
+<!--<section class="bg-indigo-50 py-20">-->
+
+<!--    <div class="max-w-6xl mx-auto px-6 text-center">-->
+
+<!--        <h2 class="text-3xl font-bold mb-12">-->
+<!--            Ready to check Your Result?-->
+<!--        </h2>-->
+
+<!--        <div class="grid md:grid-cols-3 gap-8">-->
+
+
+<!--            <div class="bg-white p-6 rounded-xl shadow">-->
+
+<!--                <h3 class="font-semibold text-lg mb-2">-->
+<!--                    Step 1-->
+<!--                </h3>-->
+
+<!--                <p>-->
+<!--                    Enter Roll Number-->
+<!--                </p>-->
+
+<!--            </div>-->
+
+
+
+<!--            <div class="bg-white p-6 rounded-xl shadow">-->
+
+<!--                <h3 class="font-semibold text-lg mb-2">-->
+<!--                    Step 2-->
+<!--                </h3>-->
+
+<!--                <p>-->
+<!--                    Click Search Button-->
+<!--                </p>-->
+
+<!--            </div>-->
+
+
+
+<!--            <div class="bg-white p-6 rounded-xl shadow">-->
+
+<!--                <h3 class="font-semibold text-lg mb-2">-->
+<!--                    Step 3-->
+<!--                </h3>-->
+
+<!--                <p>-->
+<!--                    View Your Result-->
+<!--                </p>-->
+
+<!--            </div>-->
+
+
+<!--        </div>-->
+
+<!--    </div>-->
+
+<!--</section>-->
+
+
+
+<!--&lt;!&ndash; CALL TO ACTION &ndash;&gt;-->
+<!--<section class="bg-blue-600 text-white py-20 text-center">-->
+
+<!--    <h2 class="text-3xl font-bold mb-6">-->
+<!--        Ready to Check Result?-->
+<!--    </h2>-->
+
+<!--    <p class="mb-8">-->
+<!--        Click the button below to see your result.-->
+<!--    </p>-->
+
+<!--    <button class="bg-white text-blue-600 px-6 py-3 rounded-xl font-semibold">-->
+<!--        Get Result-->
+<!--    </button>-->
+
+<!--</section>-->
+
+
+
+<!-- CONTACT -->
+<!--<section id="contact" class="py-20">-->
+
+<!--    <div class="max-w-4xl mx-auto text-center px-6">-->
+
+<!--        <h2 class="text-3xl font-bold mb-8">-->
+<!--            Contact Us-->
+<!--        </h2>-->
+
+
+<!--        <form class="space-y-4">-->
+
+<!--            <input-->
+<!--                    type="text"-->
+<!--                    placeholder="Your Name"-->
+<!--                    class="w-full border p-3 rounded-lg"-->
+<!--            />-->
+
+
+<!--            <input-->
+<!--                    type="email"-->
+<!--                    placeholder="Your Email"-->
+<!--                    class="w-full border p-3 rounded-lg"-->
+<!--            />-->
+
+
+<!--            <textarea-->
+<!--                    placeholder="Message"-->
+<!--                    class="w-full border p-3 rounded-lg">-->
+<!--</textarea>-->
+
+
+<!--            <button class="bg-blue-600 text-white px-6 py-3 rounded-lg">-->
+<!--                Send Message-->
+<!--            </button>-->
+
+
+<!--        </form>-->
+
+<!--    </div>-->
+
+<!--</section>-->
+
+
+
+<!-- FOOTER -->
+<footer class="bg-gray-900 text-white text-center py-6">
+
+    <p>
+        © 2026 Smart Result Website
+    </p>
+
+</footer>
+
+<!--<script>-->
+<!--    //auto -update year-->
+<!--    document.getElementById('year').textContent =new Date().getFullYear();-->
+<!--    const mobileMenu =document.getElementById('mobileMenu');-->
+<!--    </script>-->
+
+
+<!--<script>-->
+
+<!--    menu.addEEventListener('click',()=>{-->
+<!--    mobileMenu.classList.toggle('hidden')-->
+<!--    });-->
+<!--</script>-->
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>View Result</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+
+<body class="bg-gray-100">
+
+<!-- HEADER -->
+<header class="bg-white shadow-md">
+
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between">
+
+        <h1 class="text-2xl font-bold text-blue-600">
+            SmartResult
+        </h1>
+
+        <nav class="space-x-6">
+
+            <a href="index.html" class="text-gray-700 hover:text-blue-600">
+                Home
+            </a>
+
+            <a href="#" class="text-blue-600 font-semibold">
+                View Result
+            </a>
+
+            <a href="#" class="text-gray-700 hover:text-blue-600">
+                Add Result
+            </a>
+
+            <a href="#" class="text-gray-700 hover:text-blue-600">
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- PAGE TITLE -->
+<section class="text-center py-12">
+
+    <h2 class="text-3xl font-bold text-gray-800">
+        View Your Result 🎓
+    </h2>
+
+    <p class="text-gray-600 mt-2">
+        Enter your roll number to view result
+    </p>
+
+</section>
+
+
+
+<!-- SEARCH BOX -->
+<form th:action="@{'/results/view-result'}" method="post">
+<section class="max-w-xl mx-auto bg-white p-8 rounded-2xl shadow-md">
+
+    <label class="block mb-2 font-medium text-gray-700">
+        Roll Number
+
+<!--        enter rollnumber bali input field-->
+    </label>
+
+    <input
+            name="rollNumber"
+            id="rollInput"
+            type="text"
+            placeholder="Enter roll number"
+            class="w-full border p-3 rounded-lg mb-4"
+    />
+
+
+    <button
+            type="submit"
+            class="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 transition">
+
+        Get Result
+
+    </button>
+
+</section>
+</form>
+
+
+
+<!--&lt;!&ndash; RESULT CARD &ndash;&gt;-->
+<!--<section id="resultCard" class="max-w-xl mx-auto mt-8 hidden">-->
+
+<!--    <div class="bg-white p-8 rounded-2xl shadow-md">-->
+
+<!--        <h3 class="text-2xl font-bold text-blue-600 mb-4">-->
+<!--            Student Result-->
+<!--        </h3>-->
+
+
+<!--        <div class="space-y-2">-->
+
+<!--            <p><b>Name:</b> Rahul Kumar</p>-->
+
+<!--            <p><b>Roll No:</b> 101</p>-->
+
+<!--            <p><b>Course:</b> BCA</p>-->
+
+<!--            <p><b>Math:</b> 85</p>-->
+
+<!--            <p><b>English:</b> 78</p>-->
+
+<!--            <p><b>Computer:</b> 92</p>-->
+
+<!--            <p class="text-lg font-semibold text-green-600">-->
+<!--                Result: PASS-->
+<!--            </p>-->
+
+<!--        </div>-->
+
+<!--    </div>-->
+
+</section>
+
+
+
+<!-- FOOTER -->
+<footer class="text-center mt-16 py-6 text-gray-500">
+
+    © 2026 Smart Result System
+
+</footer>
+
+
+
+<!-- JS -->
+<script>
+
+<!--    function showResult()-->
+<!--    {-->
+
+<!--    let roll=document.getElementById("rollInput").value;-->
+
+<!--    if(roll=="")-->
+<!--    {-->
+<!--    alert("Please enter roll number");-->
+<!--    return;-->
+<!--    }-->
+
+<!--    document.getElementById("resultCard").classList.remove("hidden");-->
+
+<!--    }-->
+
+</script>
+
+
+
+</body>
+
+</html>
